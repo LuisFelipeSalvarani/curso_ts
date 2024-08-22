@@ -9,3 +9,12 @@ function greeting(name: string) {
 greeting(firstName)
 // greeting(anotherName)
 // greeting(x)
+
+const num1 = 51
+const num2 = 247
+
+function soma(num1: number, num2: number) {
+    console.log(num1 + num2)
+}
+
+soma(num1, num2)

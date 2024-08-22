@@ -7,3 +7,9 @@ function greeting(name) {
 greeting(firstName);
 // greeting(anotherName)
 // greeting(x)
+var num1 = 51;
+var num2 = 247;
+function soma(num1, num2) {
+    console.log(num1 + num2);
+}
+soma(num1, num2);
