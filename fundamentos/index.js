@@ -7,3 +7,11 @@ var y = 15.584848;
 console.log(typeof y);
 console.log(y);
 console.log(y.toPrecision(3));
+// 2 - string
+var firstName = "Felipe";
+console.log(firstName.toUpperCase());
+var fullName;
+var lastName = "Salvarani";
+fullName = firstName + " " + lastName;
+console.log(fullName);
+console.log(typeof fullName);
