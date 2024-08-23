@@ -47,3 +47,13 @@ let inf = "Teste"
 
 // ann = 1
 // inf = 1
+
+// 5 - Desafio 2
+
+const number: number = 575
+
+const numberToString = number.toString()
+
+const printMyNumber: string = `O meu número é ${numberToString}`
+
+console.log(printMyNumber)
