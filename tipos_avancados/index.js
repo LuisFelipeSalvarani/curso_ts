@@ -12,3 +12,8 @@ nums.push(300);
 console.log(nums);
 // nums.push("teste")
 console.log(nums[0]);
+// 3 - any
+const arr1 = [1, "teste", true, [], { nome: "Matheus" }];
+console.log(arr1);
+arr1.push([1, 2, 3]);
+console.log(arr1);
