@@ -41,3 +41,11 @@ function soma(a: number, b: number) {
 soma(4, 5)
 
 // soma("a", "b")
+
+// Retornos tipados
+
+function greeting(name: string): string {
+    return `Olá ${name}`
+}
+
+console.log(greeting("Felipe"))

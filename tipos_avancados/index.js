@@ -23,3 +23,8 @@ function soma(a, b) {
 }
 soma(4, 5);
 // soma("a", "b")
+// Retornos tipados
+function greeting(name) {
+    return `Olá ${name}`;
+}
+console.log(greeting("Felipe"));
