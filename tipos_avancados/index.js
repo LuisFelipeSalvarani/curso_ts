@@ -109,3 +109,7 @@ function showDirection(direction) {
 }
 showDirection("left");
 // showDirection("top")
+// Non-null Assertion Operator
+// 16 - non null assertion operators
+const p = document.getElementById("some-p");
+console.log(p.innerText);
