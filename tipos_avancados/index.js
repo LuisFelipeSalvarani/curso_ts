@@ -23,8 +23,14 @@ function soma(a, b) {
 }
 soma(4, 5);
 // soma("a", "b")
-// Retornos tipados
+// 5 - Retornos tipados
 function greeting(name) {
     return `Olá ${name}`;
 }
 console.log(greeting("Felipe"));
+// 6 - Função anônima
+setTimeout(function () {
+    const sallary = 1000;
+    // console.log(parseFloat(sallary))
+    // console.log(sallary)
+}, 2000);
