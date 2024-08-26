@@ -60,7 +60,7 @@ setTimeout(function() {
     // console.log(sallary)
 }, 2000)
 
-// 7 - Tipos de objeto
+// 7 - Tipos de objetos
 
 function passCoordinates(coord: {x: number, y: number}) {
     console.log("X coordinates: " + coord.x)
@@ -73,3 +73,17 @@ passCoordinates(objCoord)
 // passCoordinates({nome: 1, sobrenome: 2})
 
 const pessoaObj:{nome: string, surname: string} = {nome: "Felipe", surname: "Salvarani"}
+
+// 8 - Propriedades opcionais
+
+function showNumbers(a: number, b: number, c?: number) {
+    console.log("A: " + a)
+    console.log("B: " + b)
+    if(c) {
+        console.log("C: " + c)
+    }
+}
+
+showNumbers(1, 2, 3)
+showNumbers(4, 5)
+// showNumbers(6)

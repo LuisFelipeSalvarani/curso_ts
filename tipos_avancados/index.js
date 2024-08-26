@@ -34,7 +34,7 @@ setTimeout(function () {
     // console.log(parseFloat(sallary))
     // console.log(sallary)
 }, 2000);
-// 7 - Tipos de objeto
+// 7 - Tipos de objetos
 function passCoordinates(coord) {
     console.log("X coordinates: " + coord.x);
     console.log("Y coordinates: " + coord.y);
@@ -43,3 +43,14 @@ const objCoord = { x: 329, y: 84.2 };
 passCoordinates(objCoord);
 // passCoordinates({nome: 1, sobrenome: 2})
 const pessoaObj = { nome: "Felipe", surname: "Salvarani" };
+// 8 - Propriedades opcionais
+function showNumbers(a, b, c) {
+    console.log("A: " + a);
+    console.log("B: " + b);
+    if (c) {
+        console.log("C: " + c);
+    }
+}
+showNumbers(1, 2, 3);
+showNumbers(4, 5);
+// showNumbers(6)
