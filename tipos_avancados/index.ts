@@ -59,3 +59,17 @@ setTimeout(function() {
 
     // console.log(sallary)
 }, 2000)
+
+// 7 - Tipos de objeto
+
+function passCoordinates(coord: {x: number, y: number}) {
+    console.log("X coordinates: " + coord.x)
+    console.log("Y coordinates: " +  coord.y)
+}
+
+const objCoord = {x: 329, y: 84.2}
+
+passCoordinates(objCoord)
+// passCoordinates({nome: 1, sobrenome: 2})
+
+const pessoaObj:{nome: string, surname: string} = {nome: "Felipe", surname: "Salvarani"}
