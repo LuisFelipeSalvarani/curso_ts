@@ -100,3 +100,12 @@ console.log(somePerson);
 // type personType = {
 //     age: number
 // }
+// 15 - Literal types
+let test;
+test = "testando";
+console.log(test);
+function showDirection(direction) {
+    console.log(`A direção é: ${direction}`);
+}
+showDirection("left");
+// showDirection("top")
