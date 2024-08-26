@@ -63,7 +63,7 @@ function advancedGreeting(firstName, lastName) {
 }
 console.log(advancedGreeting("Felipe", "Salvarani"));
 console.log(advancedGreeting("Pamela"));
-// Union types
+// 10 - Union types
 function showBalance(balance) {
     console.log(`O saldo da conta é R$${balance}`);
 }
@@ -71,3 +71,12 @@ showBalance(100);
 showBalance("500");
 // showBalance(true)
 const arr2 = [1, "Teste", true];
+// 11 - Avncaçando em union types
+function showUserRole(role) {
+    if (typeof role === "boolean") {
+        return "Usuário não aprovado!";
+    }
+    return `A função do usuário é: ${role}`;
+}
+console.log(showUserRole(false));
+console.log(showUserRole("Admin"));
