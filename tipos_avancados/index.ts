@@ -100,3 +100,15 @@ function advancedGreeting(firstName: string, lastName?: string) {
 
 console.log(advancedGreeting("Felipe", "Salvarani"))
 console.log(advancedGreeting("Pamela"))
+
+// Union types
+
+function showBalance(balance: string | number) {
+    console.log(`O saldo da conta é R$${balance}`)
+}
+
+showBalance(100)
+showBalance("500")
+// showBalance(true)
+
+const arr2: Array<number | string | boolean> = [1, "Teste", true]
