@@ -157,3 +157,25 @@ const coordObj: Point = {
 }
 
 showCoords(coordObj)
+
+// 14 - interface x type alias
+
+interface Person {
+    name: string
+}
+
+interface Person {
+    age: number
+}
+
+const somePerson: Person = {name: "Felipe", age: 24}
+
+console.log(somePerson)
+
+type personType = {
+    name: string
+}
+
+// type personType = {
+//     age: number
+// }
