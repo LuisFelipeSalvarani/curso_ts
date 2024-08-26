@@ -79,3 +79,13 @@ function showDogDetails(dog) {
 }
 showDogDetails(turca);
 showDogDetails(bob);
+function showUserReview(review) {
+    if (!review) {
+        console.log("Você não avaliou o produto!");
+        return;
+    }
+    console.log(`A nota que você deu foi: ${review}, obrigado!`);
+}
+showUserReview(4);
+showUserReview(false);
+showUserReview(2);

@@ -92,3 +92,19 @@ function showDogDetails(dog: Dog) {
 
 showDogDetails(turca)
 showDogDetails(bob)
+
+// 5 - Desafio 3
+type Review = number | boolean
+
+function showUserReview(review: Review) {
+    if(!review) {
+        console.log("Você não avaliou o produto!")
+        return
+    }
+
+    console.log(`A nota que você deu foi: ${review}, obrigado!`)
+}
+
+showUserReview(4)
+showUserReview(false)
+showUserReview(2)
