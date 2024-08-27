@@ -78,3 +78,8 @@ function doSomething(x) {
 }
 doSomething([1, 2, 3]);
 doSomething(5);
+// 9 - never
+function showErrorMessage(msg) {
+    throw new Error(msg);
+}
+// showErrorMessage("Algum erro!")

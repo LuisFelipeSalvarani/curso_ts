@@ -99,3 +99,10 @@ function doSomething(x: unknown) {
 
 doSomething([1, 2, 3])
 doSomething(5)
+
+// 9 - never
+function showErrorMessage(msg: string): never {
+    throw new Error(msg)
+}
+
+// showErrorMessage("Algum erro!")
