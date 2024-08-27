@@ -35,4 +35,15 @@ let coords = {
 };
 coords.y = 15;
 console.log(coords);
-// coords.z = "teste"
+const felipe = {
+    name: "Felipe",
+    age: 24
+};
+console.log(felipe);
+const goku = {
+    name: "Goku",
+    age: 50,
+    superpowers: ["Kamehameha", "Genki Dama"]
+};
+console.log(goku);
+console.log(goku.superpowers[1]);

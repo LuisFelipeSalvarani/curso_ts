@@ -74,3 +74,30 @@ coords.y = 15
 console.log(coords)
 
 // coords.z = "teste"
+
+// 5 - extending interface
+interface Human {
+    name: string
+    age: number
+}
+
+interface SuperHuman extends Human {
+    superpowers: string[]
+}
+
+const felipe: Human = {
+    name: "Felipe",
+    age: 24
+}
+
+console.log(felipe)
+
+const goku: SuperHuman = {
+    name: "Goku",
+    age: 50,
+    superpowers: ["Kamehameha", "Genki Dama"]
+}
+
+console.log(goku)
+
+console.log(goku.superpowers[1])
