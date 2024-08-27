@@ -25,3 +25,9 @@ const u1 = {
 const u2 = { email: "julia@email.com" };
 showUserDatails(u1);
 showUserDatails(u2);
+const fusca = {
+    brand: "VW",
+    wheels: 4
+};
+console.log(fusca);
+// fusca.wheels = 5
