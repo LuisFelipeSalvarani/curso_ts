@@ -46,3 +46,9 @@ console.log(biggestNumber(5, 3));
 console.log(biggestNumber("12", "5"));
 // console.log(biggestNumber(false, true))
 // console.log(biggestNumber("5", 6))
+// especificar tipos de parâmetros
+function mergeArrays(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+console.log(mergeArrays([1, 2, 3], [5, 6]));
+console.log(mergeArrays([1, 2, 3], ["teste", "testando"]));
