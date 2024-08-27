@@ -47,3 +47,10 @@ const goku = {
 };
 console.log(goku);
 console.log(goku.superpowers[1]);
+const arnold = {
+    name: "Arnold",
+    type: "Shotgun",
+    caliber: 12
+};
+console.log(arnold);
+console.log(arnold.caliber);
