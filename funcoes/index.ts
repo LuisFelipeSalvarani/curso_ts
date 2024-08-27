@@ -88,7 +88,7 @@ function somaDefault(n: number, m = 10) {
 console.log(somaDefault(10))
 console.log(somaDefault(15, 32))
 
-// 8 - tipo unknown
+// 8 - unknown
 function doSomething(x: unknown) {
     if(Array.isArray(x)){
         console.log(x[0])
@@ -106,3 +106,12 @@ function showErrorMessage(msg: string): never {
 }
 
 // showErrorMessage("Algum erro!")
+
+// 10 - rest operator
+function sumAll(...n: number[]) {
+    return n.reduce((number, sum) => sum + number)
+}
+
+console.log(sumAll(1, 2, 3, 4, 5))
+console.log(sumAll(5, 348, 2348))
+// console.log(sumAll("teste"))
