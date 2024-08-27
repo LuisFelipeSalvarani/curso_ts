@@ -65,4 +65,13 @@ myArray = myArray.map((item) => {
     return `Fruta: ${item}`;
 });
 console.log(myArray);
-// myArray[0] = "teste"
+// number[]
+const myNumberArray = [1, 2, 3, 4, 5];
+// const myNumberArray2: fiveNumbers = [1, 2, 3, 4, 5, 6]
+// const mixedArray: fiveNumbers = [1, true, "teste", 4, 5]
+console.log(myNumberArray);
+const anotherUser = ["Felipe", 24];
+console.log(anotherUser[0]);
+anotherUser[0] = "Luis";
+console.log(anotherUser[0]);
+// anotherUser[1] = "teste"
