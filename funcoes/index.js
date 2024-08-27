@@ -67,3 +67,14 @@ function somaDefault(n, m = 10) {
 }
 console.log(somaDefault(10));
 console.log(somaDefault(15, 32));
+// 8 - tipo unknown
+function doSomething(x) {
+    if (Array.isArray(x)) {
+        console.log(x[0]);
+    }
+    else if (typeof x === "number") {
+        console.log("X é um número");
+    }
+}
+doSomething([1, 2, 3]);
+doSomething(5);
