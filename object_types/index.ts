@@ -20,3 +20,27 @@ const shirt:Product = {
 
 showProductDetails(shirt)
 showProductDetails({name: "Tênis", price: 129.99, isAvailable: false})
+
+// 2 - parâmetros opcionais no interface
+interface User {
+    email: string
+    role?: string
+}
+
+function showUserDatails(user: User) {
+    console.log(`O usuário tem o e-mail: ${user.email}`)
+
+    if(user.role) {
+        console.log(`A função do usuário é: ${user.role}`)
+    }
+}
+
+const u1:User = {
+    email: "felipe@email.com",
+    role: "Admin"
+}
+
+const u2:User = { email: "julia@email.com" }
+
+showUserDatails(u1)
+showUserDatails(u2)
