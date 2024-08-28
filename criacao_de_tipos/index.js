@@ -30,4 +30,15 @@ const server = {
 };
 console.log(getSomeKey(server, "ram"));
 console.log(getSomeKey(server, "hd"));
-// console.log(getSomeKey(server, "teste"))
+function showCharName(obj, key) {
+    return `${obj[key]}`;
+}
+const myChar = {
+    name: "Felipe",
+    age: 24,
+    hasDriveLicense: true
+};
+console.log(showCharName(myChar, 'name'));
+console.log(showCharName(myChar, 'age'));
+console.log(showCharName(myChar, 'hasDriveLicense'));
+// console.log(showCharName(myChar, 'teste'))
