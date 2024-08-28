@@ -20,3 +20,20 @@ const thirdObj = {price: 19.99, category: "Roupa"}
 console.log(showProductName(myObj))
 console.log(showProductName(otherProduct))
 // console.log(showProductName(thirdObj))
+
+// 3 - generics com interface
+interface MyObject<T, U, Q> {
+    name: string
+    wheels: T
+    engine: U
+    color: Q
+}
+
+type Car = MyObject<number, number, string>
+type Pen = MyObject<boolean, boolean, string>
+
+const myCar:Car = {name: "Fucas", wheels: 4, engine: 1.0, color: "Branco"}
+const myPen:Pen = {name: "Caneta BIC", wheels: false, engine: false, color: "Azul"}
+
+console.log(myCar)
+console.log(myPen)
