@@ -65,7 +65,7 @@ interface CoordObject {
     [index: string]: number
 }
 
-let coords: CoordObject = {
+const coords: CoordObject = {
     x: 10
 }
 
@@ -131,8 +131,9 @@ let myArray: ReadonlyArray<string> = ["Maçã", "Laranja", "Banana"]
 
 console.log(myArray)
 
+// biome-ignore lint/complexity/noForEach: <explanation>
 myArray.forEach((item) => {
-    console.log("Fruta: " + item)
+    console.log(`Fruta: ${item}`)
 })
 
 myArray = myArray.map((item) => {
