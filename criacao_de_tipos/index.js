@@ -42,3 +42,7 @@ console.log(showCharName(myChar, 'name'));
 console.log(showCharName(myChar, 'age'));
 console.log(showCharName(myChar, 'hasDriveLicense'));
 // console.log(showCharName(myChar, 'teste'))
+// 6 - typeof type operator
+const userName = "Felipe";
+const userName2 = "Luis";
+const userName4 = "Pamela";
