@@ -46,3 +46,17 @@ console.log(showCharName(myChar, 'hasDriveLicense'));
 const userName = "Felipe";
 const userName2 = "Luis";
 const userName4 = "Pamela";
+const newTruck = {
+    km: 10000,
+    kg: 5000,
+    description: "Caminhão para pouca carga"
+};
+function showKm(km) {
+    console.log(`O veículo tam a km de: ${km}`);
+}
+showKm(newTruck.km);
+const newCar = {
+    km: 5000,
+    kg: 1000
+};
+showKm(newCar.km);
