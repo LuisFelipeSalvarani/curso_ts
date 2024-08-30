@@ -25,3 +25,31 @@ __decorate([
 ], myClass.prototype, "testing", null);
 const myObj = new myClass();
 myObj.testing();
+// 2 - múltiplos decorators
+function a() {
+    return function (target, propertKey, descriptor) {
+        console.log("executou a.");
+    };
+}
+function b() {
+    return function (target, propertKey, descriptor) {
+        console.log("executou b.");
+    };
+}
+function c() {
+    return function (target, propertKey, descriptor) {
+        console.log("executou c.");
+    };
+}
+class MultipleDecorators {
+    testing() {
+        console.log("Termiando execução");
+    }
+}
+__decorate([
+    c(),
+    a(),
+    b()
+], MultipleDecorators.prototype, "testing", null);
+const multiple = new MultipleDecorators();
+multiple.testing();
