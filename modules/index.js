@@ -14,3 +14,6 @@ const multiple_1 = require("./multiple");
 console.log(multiple_1.a);
 console.log(multiple_1.b);
 (0, multiple_1.myFunction)();
+// 4 - alias
+const changeName_1 = require("./changeName");
+console.log(changeName_1.someName);

@@ -15,3 +15,8 @@ console.log(a)
 console.log(b)
 
 myFunction()
+
+// 4 - alias
+import { someName as name } from "./changeName"
+
+console.log(name)
