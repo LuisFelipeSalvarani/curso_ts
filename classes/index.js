@@ -18,3 +18,15 @@ const luis = new NewUser("Luis", 24);
 console.log(luis);
 // const pamela = new NewUser("Pamela")
 // const pamela = new NewUser(20, 20)
+// 3 - campos readonly
+class Car {
+    constructor(name) {
+        this.wheels = 4;
+        this.name = name;
+    }
+}
+const fusca = new Car("Fusca");
+console.log(fusca);
+console.log(fusca.wheels);
+fusca.name = "Fusca Turbo";
+// fusca.wheels = 5
