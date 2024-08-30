@@ -72,3 +72,28 @@ class User {
 const felipe = new User("Felipe")
 
 console.log(felipe)
+
+// 4 - method decorator
+function enumerable(value: boolean) {
+  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+    descriptor.enumerable = value
+  }
+}
+
+class Machine {
+  name
+
+  constructor(name: string) {
+    this.name = name
+  }
+
+  @enumerable(false)
+  showName() {
+    console.log(this)
+    return `O nome da máquina é: ${this.name}`
+  }
+}
+
+const trator = new Machine("Trator")
+
+console.log(trator.showName())
