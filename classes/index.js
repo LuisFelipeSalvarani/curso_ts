@@ -155,3 +155,23 @@ const cInstance = new C();
 console.log(cInstance.x);
 const dInstance = new D();
 console.log(dInstance.x);
+// 12 - visibilidade: protected
+class E {
+    constructor() {
+        this.x = 10;
+    }
+    protectedMethod() {
+        console.log("Este método é protegido");
+    }
+}
+class F extends E {
+    showX() {
+        console.log(`X: ${this.x}`);
+    }
+    showProtecetedMethod() {
+        this.protectedMethod();
+    }
+}
+const fInstance = new F();
+fInstance.showX();
+fInstance.showProtecetedMethod();
