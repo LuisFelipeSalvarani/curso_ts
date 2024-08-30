@@ -9,3 +9,8 @@ const greet_1 = __importDefault(require("./greet"));
 // 2 - importação de variáveis
 const varables_1 = require("./varables");
 console.log(varables_1.x);
+// 3 - múltplas importações
+const multiple_1 = require("./multiple");
+console.log(multiple_1.a);
+console.log(multiple_1.b);
+(0, multiple_1.myFunction)();
