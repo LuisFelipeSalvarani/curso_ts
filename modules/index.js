@@ -6,3 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // 1 - importação de arquivos
 const greet_1 = __importDefault(require("./greet"));
 (0, greet_1.default)();
+// 2 - importação de variáveis
+const varables_1 = require("./varables");
+console.log(varables_1.x);
