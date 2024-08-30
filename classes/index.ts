@@ -211,3 +211,20 @@ class TestingInterface implements showTitle {
     return `O título é ${this.title}`
   }
 }
+
+// 10 - override de métodos
+class Base {
+  someMethod() {
+    console.log("alguma coisa")
+  }
+}
+
+class Nova extends Base {
+  someMethod() {
+    console.log("Testando outra coisa")
+  }
+}
+
+const myObject = new Nova()
+
+myObject.someMethod()
