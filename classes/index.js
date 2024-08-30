@@ -209,3 +209,20 @@ class StaticMembers {
 StaticMembers.prop = "Teste static";
 console.log(StaticMembers.prop);
 StaticMembers.staticMethod();
+// 15 - generic class
+class Item {
+    constructor(first, second) {
+        this.first = first;
+        this.second = second;
+    }
+    get showFirst() {
+        return `O first é: ${this.first}`;
+    }
+}
+const newItem = new Item("caixa", "surpresa");
+console.log(newItem);
+console.log(newItem.showFirst);
+console.log(typeof newItem.first);
+const secondItem = new Item(12, true);
+console.log(secondItem.showFirst);
+console.log(typeof secondItem.first);
