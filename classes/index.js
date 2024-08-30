@@ -248,3 +248,12 @@ console.log(newShirt.name);
 // console.log(newShirt.price)
 console.log(newShirt.showQty);
 console.log(newShirt.showPrice);
+// 17 - class expressions
+const myClass = class {
+    constructor(name) {
+        this.name = name;
+    }
+};
+const pessoa = new myClass("Jones");
+console.log(pessoa);
+console.log(pessoa.name);
