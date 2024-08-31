@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // 1 - exemplo decorator
 function myDecorator() {
     console.log("Iniciando decorator!");
-    return function (target, propertKey, descriptor) {
+    return function (target, propertyKey, descriptor) {
         console.log("Executando decorator");
         console.log(target);
-        console.log(propertKey);
+        console.log(propertyKey);
         console.log(descriptor);
     };
 }
@@ -27,17 +27,17 @@ const myObj = new myClass();
 myObj.testing();
 // 2 - múltiplos decorators
 function a() {
-    return function (target, propertKey, descriptor) {
+    return function (target, propertyKey, descriptor) {
         console.log("executou a.");
     };
 }
 function b() {
-    return function (target, propertKey, descriptor) {
+    return function (target, propertyKey, descriptor) {
         console.log("executou b.");
     };
 }
 function c() {
-    return function (target, propertKey, descriptor) {
+    return function (target, propertyKey, descriptor) {
         console.log("executou c.");
     };
 }
@@ -72,7 +72,7 @@ const felipe = new User("Felipe");
 console.log(felipe);
 // 4 - method decorator
 function enumerable(value) {
-    return function (target, propertKey, descriptor) {
+    return function (target, propertyKey, descriptor) {
         descriptor.enumerable = value;
     };
 }
@@ -114,7 +114,7 @@ console.log(charmander);
 // 6 - property decorator
 // id = 00001
 function formatNumber() {
-    return function (target, propertKey) {
+    return function (target, propertyKey) {
         let value;
         const getter = function () {
             return value;
@@ -122,7 +122,7 @@ function formatNumber() {
         const setter = function (newVal) {
             value = newVal.padStart(5, "0");
         };
-        Object.defineProperty(target, propertKey, {
+        Object.defineProperty(target, propertyKey, {
             set: setter,
             get: getter
         });
@@ -195,3 +195,36 @@ const newPost = new Post();
 newPost.post("Meu primeiro post!", newPost.alreadyPosted);
 newPost.post("Meu segundo post!", newPost.alreadyPosted);
 newPost.post("Meu terceiro post!", newPost.alreadyPosted);
+// 9 - exemplo real property decorator
+function Max(limit) {
+    return function (target, propertyKey) {
+        let value;
+        const getter = () => {
+            return value;
+        };
+        const setter = (newVal) => {
+            if (newVal.length > limit) {
+                console.log(`O valor deve ter no máximo ${limit} dígitos.`);
+                return;
+            }
+            else {
+                value = newVal;
+            }
+        };
+        Object.defineProperty(target, propertyKey, {
+            get: getter,
+            set: setter
+        });
+    };
+}
+class Admin {
+    constructor(username) {
+        this.username = username;
+    }
+}
+__decorate([
+    Max(10)
+], Admin.prototype, "username", void 0);
+let pamela = new Admin("pamela.junqueira");
+let luis = new Admin("luis");
+console.log(luis);

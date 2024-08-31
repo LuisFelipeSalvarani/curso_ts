@@ -1,10 +1,10 @@
 // 1 - exemplo decorator
 function myDecorator() {
   console.log("Iniciando decorator!")
-  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+  return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     console.log("Executando decorator")
     console.log(target)
-    console.log(propertKey)
+    console.log(propertyKey)
     console.log(descriptor)
   }
 }
@@ -22,19 +22,19 @@ myObj.testing()
 
 // 2 - múltiplos decorators
 function a() {
-  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+  return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     console.log("executou a.")
   }
 }
 
 function b() {
-  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+  return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     console.log("executou b.")
   }
 }
 
 function c() {
-  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+  return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     console.log("executou c.")
   }
 }
@@ -75,7 +75,7 @@ console.log(felipe)
 
 // 4 - method decorator
 function enumerable(value: boolean) {
-  return function(target: any, propertKey: string, descriptor: PropertyDescriptor) {
+  return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     descriptor.enumerable = value
   }
 }
@@ -125,8 +125,8 @@ console.log(charmander)
 
 // 6 - property decorator
 // id = 00001
-function formatNumber {
-  return function(target: Object, propertKey: string) {
+function formatNumber() {
+  return function(target: Object, propertyKey: string) {
     let value: string
 
     const getter = function() {
@@ -137,7 +137,7 @@ function formatNumber {
       value = newVal.padStart(5, "0")
     }
 
-    Object.defineProperty(target, propertKey, {
+    Object.defineProperty(target, propertyKey, {
       set: setter,
       get: getter
     })
@@ -223,3 +223,42 @@ newPost.post("Meu primeiro post!", newPost.alreadyPosted)
 newPost.post("Meu segundo post!", newPost.alreadyPosted)
 
 newPost.post("Meu terceiro post!", newPost.alreadyPosted)
+
+// 9 - exemplo real property decorator
+function Max(limit: number) {
+  return function(target: Object, propertyKey: string) {
+    let value: string
+
+    const getter = () => {
+      return value
+    }
+
+    const setter = (newVal: string) => {
+      if(newVal.length > limit) {
+        console.log(`O valor deve ter no máximo ${limit} dígitos.`)
+        return
+      } else {
+        value = newVal
+      }
+    }
+
+    Object.defineProperty(target, propertyKey, {
+      get: getter,
+      set: setter
+    })
+  }
+}
+
+class Admin {
+  @Max(10)
+  username
+
+  constructor(username: string) {
+    this.username = username
+  }
+}
+
+let pamela = new Admin("pamela.junqueira")
+let luis = new Admin("luis")
+
+console.log(luis)
