@@ -1,4 +1,5 @@
 import './App.css'
+import { createContext } from 'react'
 
 // 4 - importação de componentes
 import { FirstComponent } from './components/FirstComponent'
@@ -10,7 +11,8 @@ import { Destructuring, Category } from './components/Destructuring'
 // 6 - useState
 import { State } from './components/State'
 
-import { createContext } from 'react'
+// 10 - utilizando contexto
+import { Context } from './components/Context'
 
 // 8 - type
 type textOrNull = string | null
@@ -23,6 +25,8 @@ interface IAppContext {
   framework: string
   projects: number
 }
+
+export const AppContext = createContext<IAppContext | null>(null)
 
 export function App() {
   // 1 - variáveis
@@ -50,8 +54,6 @@ export function App() {
     projects: 5,
   }
 
-  const AppContext = createContext<IAppContext | null>(null)
-
   return (
     <>
       <AppContext.Provider value={contexValue}>
@@ -67,6 +69,7 @@ export function App() {
         <State />
         {myText && <p>Tem texto na variável</p>}
         {mySecondText && <p>Tem texto na variável</p>}
+        <Context />
       </AppContext.Provider>
     </>
   )
