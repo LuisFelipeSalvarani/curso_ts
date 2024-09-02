@@ -7,6 +7,9 @@ import { FirstComponent } from './components/FirstComponent'
 import { SecondComponent } from './components/SecondComponent'
 import { Destructuring } from './components/Destructuring'
 
+// 6 - useState
+import { State } from './components/State'
+
 export function App() {
   // 1 - variáveis
   const name: string = "Felipe"
@@ -28,6 +31,7 @@ export function App() {
       <SecondComponent name='Segundo' />
       <Destructuring title='Primeiro post' content='Algum conteúdo' commentQty={10} tags={["ts", "js"]} />
       <Destructuring title='Segundo post' content='Mais outro conteúdo' commentQty={5} tags={["python"]} />
+      <State />
     </>
   )
 }
