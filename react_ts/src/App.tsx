@@ -1,5 +1,8 @@
 import './App.css'
 
+// 4 - importação de componentes
+import { FirstComponent } from './components/FirstComponent'
+
 export function App() {
   // 1 - variáveis
   const name: string = "Felipe"
@@ -17,6 +20,7 @@ export function App() {
       <p>Idade: {age}</p>
       {isWorking && (<p>Está trabalhando</p>)}
       <h3>{userGreeting(name)}</h3>
+      <FirstComponent />
     </>
   )
 }
