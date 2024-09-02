@@ -3,6 +3,10 @@ import './App.css'
 // 4 - importação de componentes
 import { FirstComponent } from './components/FirstComponent'
 
+// 5 - desestruturando props
+import { SecondComponent } from './components/SecondComponent'
+import { Destructuring } from './components/Destructuring'
+
 export function App() {
   // 1 - variáveis
   const name: string = "Felipe"
@@ -21,6 +25,9 @@ export function App() {
       {isWorking && (<p>Está trabalhando</p>)}
       <h3>{userGreeting(name)}</h3>
       <FirstComponent />
+      <SecondComponent name='Segundo' />
+      <Destructuring title='Primeiro post' content='Algum conteúdo' commentQty={10} tags={["ts", "js"]} />
+      <Destructuring title='Segundo post' content='Mais outro conteúdo' commentQty={5} tags={["python"]} />
     </>
   )
 }
