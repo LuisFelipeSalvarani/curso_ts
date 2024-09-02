@@ -3,7 +3,7 @@ interface Props {
   content: string
   commentQty: number
   tags: string[]
-  // 8 - enum
+  // 7 - enum
   category: Category
 }
 
